@@ -13,9 +13,13 @@
 		9D53203827EBE5EB0067CE79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D53203627EBE5EB0067CE79 /* Main.storyboard */; };
 		9D53203A27EBE5ED0067CE79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D53203927EBE5ED0067CE79 /* Assets.xcassets */; };
 		9D53203D27EBE5ED0067CE79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D53203B27EBE5ED0067CE79 /* LaunchScreen.storyboard */; };
+		BDCDB64BA35EA50CA0C74C64 /* Pods_LensChecksDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C08A9E36E7695563A115039 /* Pods_LensChecksDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		079F8E0682EE432FA0393AE5 /* Pods-LensChecksDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LensChecksDemo.debug.xcconfig"; path = "Target Support Files/Pods-LensChecksDemo/Pods-LensChecksDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		0C08A9E36E7695563A115039 /* Pods_LensChecksDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LensChecksDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		810907D8964889BD80E1A1D9 /* Pods-LensChecksDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LensChecksDemo.release.xcconfig"; path = "Target Support Files/Pods-LensChecksDemo/Pods-LensChecksDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9D53202D27EBE5EB0067CE79 /* LensChecksDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LensChecksDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D53203027EBE5EB0067CE79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D53203227EBE5EB0067CE79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDCDB64BA35EA50CA0C74C64 /* Pods_LensChecksDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +45,18 @@
 		067631E63417D0C762FDCC18 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				079F8E0682EE432FA0393AE5 /* Pods-LensChecksDemo.debug.xcconfig */,
+				810907D8964889BD80E1A1D9 /* Pods-LensChecksDemo.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		151474C8E7DC00ABDA502C57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C08A9E36E7695563A115039 /* Pods_LensChecksDemo.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		9D53202427EBE5EB0067CE79 = {
@@ -50,6 +65,7 @@
 				9D53202F27EBE5EB0067CE79 /* LensChecksDemo */,
 				9D53202E27EBE5EB0067CE79 /* Products */,
 				067631E63417D0C762FDCC18 /* Pods */,
+				151474C8E7DC00ABDA502C57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D53204127EBE5ED0067CE79 /* Build configuration list for PBXNativeTarget "LensChecksDemo" */;
 			buildPhases = (
+				BE29ADEBC450077749958A07 /* [CP] Check Pods Manifest.lock */,
 				9D53202927EBE5EB0067CE79 /* Sources */,
 				9D53202A27EBE5EB0067CE79 /* Frameworks */,
 				9D53202B27EBE5EB0067CE79 /* Resources */,
+				9D232E1428C0836500774F9C /* Add env variables */,
+				DE04917BCE3D997951CC3AE4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,6 +159,67 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9D232E1428C0836500774F9C /* Add env variables */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "Add env variables";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nINFO_PLIST=\"$BUILT_PRODUCTS_DIR/$INFOPLIST_PATH\"\n/usr/libexec/PlistBuddy -c \"Add :VERYFI_CLIENT_ID string $VERYFI_CLIENT_ID\" \"$INFO_PLIST\"\n/usr/libexec/PlistBuddy -c \"Add :VERYFI_USERNAME string $VERYFI_USERNAME\" \"$INFO_PLIST\"\n/usr/libexec/PlistBuddy -c \"Add :VERYFI_API_KEY string $VERYFI_API_KEY\" \"$INFO_PLIST\"\n/usr/libexec/PlistBuddy -c \"Add :VERYFI_URL string $VERYFI_URL\" \"$INFO_PLIST\"\n\n";
+		};
+		BE29ADEBC450077749958A07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LensChecksDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE04917BCE3D997951CC3AE4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LensChecksDemo/Pods-LensChecksDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LensChecksDemo/Pods-LensChecksDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LensChecksDemo/Pods-LensChecksDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9D53202927EBE5EB0067CE79 /* Sources */ = {
@@ -292,6 +372,7 @@
 		};
 		9D53204227EBE5ED0067CE79 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 079F8E0682EE432FA0393AE5 /* Pods-LensChecksDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,6 +403,7 @@
 		};
 		9D53204327EBE5ED0067CE79 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 810907D8964889BD80E1A1D9 /* Pods-LensChecksDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
