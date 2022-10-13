@@ -23,9 +23,6 @@ You can read further about Lens in Veryfi's dedicated page: https://www.veryfi.c
 4. [Other platforms](#other_platforms)
 5. [Get in contact with our team](#contact)
 
-## Veryfi Lens iOS Example <a name="example"></a>
-![gif-checks](https://user-images.githubusercontent.com/30237430/162526269-dc012520-a515-4f51-a638-283438e2247e.gif)
-
 ## Other Lens iOS Examples <a name="examples"></a>
 This is an example of how to use Veryfi Lens Checks in your app, you can find the developer documentation [here](iOSLensChecks.pdf).
 You can find five example projects, which are the five versions of Lens that we currently offer:
