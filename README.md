@@ -12,6 +12,8 @@ Veryfi Lens is a Framework: a self-contained, reusable chunks of code and resour
 
 Lens is built in native code and optimized for fast performance, clean user experience and low memory usage.
 
+![checks](https://user-images.githubusercontent.com/30441118/195657073-393d39d0-693e-4a61-b3b7-b80d76efee7e.gif)
+
 You can read further about Lens in Veryfi's dedicated page: https://www.veryfi.com/lens/
 
 ## Table of content
