@@ -20,7 +20,7 @@ class LensSettingsViewController: UIViewController {
         "API Settings"
     ]
     let generalSection: [(Keys,Types)] = [(.autoLightDetectionIsOn, .switchCell), (.stitchIsOn, .switchCell), (.autoSubmitDocumentOnCapture, .switchCell), (.backupDocsToGallery, .switchCell), (.returnStitchedPDF, .switchCell), (.checksBackIsOn, .switchCell), (.closeCameraOnSubmit, .switchCell)]
-    let imageProcessingSection: [(Keys,Types)]  = [(.autoRotateIsOn, .switchCell),(.blurDetectionIsOn, .switchCell),(.autoSkewCorrectionIsOn,.switchCell),(.autoCropGalleryIsOn, .switchCell)]
+    let imageProcessingSection: [(Keys,Types)]  = [(.autoRotateIsOn, .switchCell),(.blurDetectionIsOn, .switchCell),(.autoSkewCorrectionIsOn,.switchCell),(.autoCropGalleryIsOn, .switchCell), (.gpuIsOn, .switchCell)]
     let uiSection: [(Keys,Types)]  = [(.docDetectFillUIColor, .colorCell), (.submitButtonBackgroundColor, .stringColorCell),(.submitButtonBorderColor,.stringColorCell),(.submitButtonFontColor,.stringColorCell),(.submitButtonCornerRadius, .integerValueCell),(.galleryIsOn,.switchCell),(.rotateDocIsOn,.switchCell)]
     let apiSection: [(Keys,Types)]  = [(.autoDeleteAfterProcessing, .switchCell),(.boostModeIsOn, .switchCell),(.boundingBoxesIsOn, .switchCell),(.detectBlurResponseIsOn,.switchCell),(.isProduction,.switchCell),(.confidenceDetailsIsOn,.switchCell),(.parseAddressIsOn,.switchCell),(.externalId,.stringValueCell)]
     lazy var sections: [[(Keys,Types)]] = [generalSection, imageProcessingSection, uiSection, apiSection]
