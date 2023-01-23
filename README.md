@@ -17,6 +17,8 @@ Veryfi Lens is a Framework: a self-contained, reusable chunks of code and resour
 
 Lens is built in native code and optimized for fast performance, clean user experience and low memory usage.
 
+![checks](https://user-images.githubusercontent.com/30441118/195657073-393d39d0-693e-4a61-b3b7-b80d76efee7e.gif)
+
 You can read further about Lens in Veryfi's dedicated page: https://www.veryfi.com/lens/
 
 ## Table of content
@@ -25,9 +27,6 @@ You can read further about Lens in Veryfi's dedicated page: https://www.veryfi.c
 3. [Configuration](#configuration)
 4. [Other platforms](#other_platforms)
 5. [Get in contact with our team](#contact)
-
-## Veryfi Lens iOS Example <a name="example"></a>
-![gif-checks](https://user-images.githubusercontent.com/30237430/162526269-dc012520-a515-4f51-a638-283438e2247e.gif)
 
 ## Other Lens iOS Examples <a name="examples"></a>
 This is an example of how to use Veryfi Lens Checks in your app, you can find the developer documentation [here](iOSLensChecks.pdf).
