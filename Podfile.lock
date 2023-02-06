@@ -1,12 +1,12 @@
 PODS:
-  - AWSCore (2.29.1)
-  - AWSS3 (2.29.1):
-    - AWSCore (= 2.29.1)
-  - VeryfiLens-Cheques (2.0.3.1):
+  - AWSCore (2.30.1)
+  - AWSS3 (2.30.1):
+    - AWSCore (= 2.30.1)
+  - VeryfiLens-Cheques (2.0.4.1):
     - AWSS3
 
 DEPENDENCIES:
-  - VeryfiLens-Cheques (= 2.0.3.1)
+  - VeryfiLens-Cheques (= 2.0.4.1)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -16,10 +16,10 @@ SPEC REPOS:
     - VeryfiLens-Cheques
 
 SPEC CHECKSUMS:
-  AWSCore: aa4a494c8bbcefe97723621fa51cfb1fad15fbd1
-  AWSS3: 15772b138d1f82a2b904d088881fb867ef58cd8c
-  VeryfiLens-Cheques: f3933885120f6e566dff4f085fb1a6f3b4efcdbc
+  AWSCore: 493e49f8118e04fa57d927ceb117ba24a9b5ca02
+  AWSS3: 658aa9e708846ff6755520e602dd6b149bded949
+  VeryfiLens-Cheques: c09e89f17052ca13933fa5273e97be7f7e39bf51
 
-PODFILE CHECKSUM: a42fe94e78522685747781d796d8a5745c657687
+PODFILE CHECKSUM: 11166bad4a170daeeff2dd1628f87fa883a30e62
 
 COCOAPODS: 1.11.3
