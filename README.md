@@ -19,6 +19,9 @@ Lens is built in native code and optimized for fast performance, clean user expe
 
 You can read further about Lens in Veryfi's dedicated page: https://www.veryfi.com/lens/
 
+You can watch our video:
+[![Veryfi Lens](https://img.youtube.com/vi/P84RDJimEtA/maxresdefault.jpg)](http://www.youtube.com/watch?v=P84RDJimEtA "Veryfi Lens Integration in Swift")
+
 ## Table of content
 1. [Veryfi Lens iOS Examples](#examples)
 2. [How to add Veryfi Lens to your project](#cocoapods)
