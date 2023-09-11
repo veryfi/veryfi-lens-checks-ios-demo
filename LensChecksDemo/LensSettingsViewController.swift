@@ -21,7 +21,7 @@ class LensSettingsViewController: UIViewController {
     ]
     let generalSection: [(Keys,Types)] = [(.autoLightDetectionIsOn, .switchCell), (.stitchIsOn, .switchCell), (.autoSubmitDocumentOnCapture, .switchCell), (.backupDocsToGallery, .switchCell), (.returnStitchedPDF, .switchCell), (.checksBackIsOn, .switchCell), (.closeCameraOnSubmit, .switchCell)]
     let imageProcessingSection: [(Keys,Types)]  = [(.autoRotateIsOn, .switchCell),(.blurDetectionIsOn, .switchCell),(.autoSkewCorrectionIsOn,.switchCell),(.autoCropGalleryIsOn, .switchCell), (.gpuIsOn, .switchCell)]
-    let uiSection: [(Keys,Types)]  = [(.docDetectFillUIColor, .colorCell), (.submitButtonBackgroundColor, .stringColorCell),(.submitButtonBorderColor,.stringColorCell),(.submitButtonFontColor,.stringColorCell),(.submitButtonCornerRadius, .integerValueCell),(.galleryIsOn,.switchCell),(.rotateDocIsOn,.switchCell)]
+    let uiSection: [(Keys,Types)]  = [(.docDetectFillUIColor, .stringColorCell), (.submitButtonBackgroundColor, .stringColorCell),(.submitButtonBorderColor,.stringColorCell),(.submitButtonFontColor,.stringColorCell),(.submitButtonCornerRadius, .integerValueCell),(.galleryIsOn,.switchCell),(.rotateDocIsOn,.switchCell)]
     let apiSection: [(Keys,Types)]  = [(.autoDeleteAfterProcessing, .switchCell),(.boostModeIsOn, .switchCell),(.boundingBoxesIsOn, .switchCell),(.detectBlurResponseIsOn,.switchCell),(.isProduction,.switchCell),(.confidenceDetailsIsOn,.switchCell),(.parseAddressIsOn,.switchCell),(.externalId,.stringValueCell)]
     lazy var sections: [[(Keys,Types)]] = [generalSection, imageProcessingSection, uiSection, apiSection]
     
@@ -50,9 +50,9 @@ class LensSettingsViewController: UIViewController {
     //MARK: Cell values handlers
     func handleColorCellTap(indexPath: IndexPath) {
         let title = sections[indexPath.section][indexPath.row].0.rawValue
-        let type = sections[indexPath.section][indexPath.row].1
-        let rawColor = type == .colorCell ? jsonSettings[title] as? UIColor ?? UIColor.green.withAlphaComponent(0.3) : UIColor.color(from: jsonSettings[title] as? String ?? "")
-        guard let color = rawColor else { return }
+        let color = UIColor.color(
+            from: jsonSettings[title] as? String ?? ""
+        ) ?? UIColor.green.withAlphaComponent(0.3)
         
         changingColor = sections[indexPath.section][indexPath.row]
         changingColorIndexPath = indexPath
