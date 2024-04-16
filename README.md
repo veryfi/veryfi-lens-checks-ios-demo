@@ -32,7 +32,8 @@ You can watch our video:
 ## Veryfi Lens Checks iOS Example <a name="example"></a>
 This is an example of how to use Veryfi Lens Checks in your app, you can find the developer documentation [here](https://app.veryfi.com/lens/docs/ios/).
 
-![checks](https://user-images.githubusercontent.com/30441118/195657073-393d39d0-693e-4a61-b3b7-b80d76efee7e.gif)
+![checks](https://github.com/veryfi/veryfi-lens-checks-ios-demo/assets/2013102/443bd7ed-e5cb-48d4-9c93-9aa54060e1f0)
+
 
 ## How to add Veryfi Lens Checks to your project <a name="cocoapods"></a>
 
