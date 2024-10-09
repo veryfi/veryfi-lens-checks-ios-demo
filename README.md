@@ -41,7 +41,7 @@ Install from our private [Cocoapods](https://hub.veryfi.com/api/settings/keys).
 
 Add in your project Podfile file the Veryfi Lens Checks iOS SDK dependency:
 ```ruby
-pod 'VeryfiLens-Cheques', '2.1.55.3'
+pod 'VeryfiLens-Cheques', '2.1.56.7'
 ```
 
 ## How to run this project <a name="configuration"></a>
