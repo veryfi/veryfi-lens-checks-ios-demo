@@ -24,6 +24,7 @@ enum Keys: String {
     case browseIsOn
     case categories
     case checksBackIsOn
+    case checkSequenceMode
     case cleanBorderIsOn
     case closeCameraOnSubmit
     case confidenceDetailsIsOn

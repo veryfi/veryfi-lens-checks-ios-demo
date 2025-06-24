@@ -19,7 +19,7 @@ class LensSettingsViewController: UIViewController {
         "UI Settings",
         "API Settings"
     ]
-    let generalSection: [(Keys,Types)] = [(.autoLightDetectionIsOn, .switchCell), (.stitchIsOn, .switchCell), (.autoSubmitDocumentOnCapture, .switchCell), (.backupDocsToGallery, .switchCell), (.returnStitchedPDF, .switchCell), (.checksBackIsOn, .switchCell), (.closeCameraOnSubmit, .switchCell)]
+    let generalSection: [(Keys,Types)] = [(.autoLightDetectionIsOn, .switchCell), (.stitchIsOn, .switchCell), (.autoSubmitDocumentOnCapture, .switchCell), (.backupDocsToGallery, .switchCell), (.returnStitchedPDF, .switchCell), (.checksBackIsOn, .switchCell), (.checkSequenceMode, .switchCell), (.closeCameraOnSubmit, .switchCell)]
     let imageProcessingSection: [(Keys,Types)]  = [(.autoRotateIsOn, .switchCell),(.blurDetectionIsOn, .switchCell),(.autoSkewCorrectionIsOn,.switchCell),(.autoCropGalleryIsOn, .switchCell), (.gpuIsOn, .switchCell)]
     let uiSection: [(Keys,Types)]  = [(.docDetectFillUIColor, .stringColorCell), (.submitButtonBackgroundColor, .stringColorCell),(.submitButtonBorderColor,.stringColorCell),(.submitButtonFontColor,.stringColorCell),(.submitButtonCornerRadius, .integerValueCell),(.galleryIsOn,.switchCell),(.rotateDocIsOn,.switchCell)]
     let apiSection: [(Keys,Types)]  = [(.autoDeleteAfterProcessing, .switchCell),(.boostModeIsOn, .switchCell),(.boundingBoxesIsOn, .switchCell),(.detectBlurResponseIsOn,.switchCell),(.isProduction,.switchCell),(.confidenceDetailsIsOn,.switchCell),(.parseAddressIsOn,.switchCell),(.externalId,.stringValueCell), (.ignoreRemoteSettings, .switchCell)]
@@ -36,6 +36,7 @@ class LensSettingsViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Start", style: .plain, target: self, action: #selector(cameraPressed))
         let settings = VeryfiLensSettings()
         settings.ignoreRemoteSettings = true
+        settings.checkSequenceMode = true
         jsonSettings = settings.json
         settingsTableView.delegate = self
         settingsTableView.dataSource = self
