@@ -8,7 +8,7 @@ target 'LensChecksDemo' do
   use_frameworks!
 
   # Pods for LensChecksDemo
-  pod 'VeryfiLens-Cheques', '3.0.22.7'
+  pod 'VeryfiLens-Cheques', '3.0.24.4'
 
 end
 
