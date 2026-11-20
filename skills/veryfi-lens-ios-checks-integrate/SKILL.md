@@ -2,6 +2,7 @@
 name: veryfi-lens-ios-checks-integrate
 description: >-
   Integrates the Veryfi Lens iOS Checks UI SDK. Covers pod VeryfiLens-Cheques, SPM repo veryfi-lens-spm-checks, front-and-back check capture, VeryfiLensSettings, cloud extraction, gallery and Files entry points, and callbacks. Use when adding bank-check capture on iOS. Bank-check TIFF requires Remote Models, not this Checks flavor.
+  Covers Lens analytics events and notification subscription (events.md).
 ---
 
 # Veryfi Lens iOS Checks
@@ -67,6 +68,7 @@ Read one level deep, and only inside this folder:
 - [implementation.md](implementation.md) — credentials, configure, present, Files and gallery, uploadImages, utils
 - [settings.md](settings.md) — recipe and the public settings catalog
 - [callbacks.md](callbacks.md) — delegate payloads
+- [events.md](events.md) — analytics events, metrics, and notification subscription
 - [troubleshooting.md](troubleshooting.md) — symptoms and conflicts
 - [clarifications.md](clarifications.md) — Unconfirmed items
 - [checklist.md](checklist.md) — done when
@@ -112,3 +114,7 @@ When generating host code, produce:
 3. One presentation path
 4. The recipe’s `VeryfiLensSettings` mutations, with a one-line comment on each non-obvious flag
 5. A short conflict note if any residual risk remains
+
+## Analytics and metrics
+
+Lens already records interaction events. When the host wants those metrics, subscribe as in [events.md](events.md). Use the event names listed there. Do not invent names. On Android, register `com.veryfi.lens.VeryfiLensSecureAnalyticsEvent`, not the deprecated `com.veryfi.lens.VeryfiLensAnalyticsEvent`. A plugin host calls the plugin observe API instead of registering that broadcast itself.
